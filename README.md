@@ -32,7 +32,7 @@
 ## Notion側の準備
 
 1. [Notion Developers](https://developers.notion.com/) でインテグレーションを作成
-2. 発行された API キーをコピー（`secret_` で始まる文字列）
+2. 発行された API キーをコピー
 3. 保存先のデータベースを作成し、以下のプロパティを設定：
    - タイトル（title型）
    - URL（url型）
@@ -72,21 +72,3 @@ notion-article-saver/
 ├── settings.html
 └── settings.js
 ```
-
-## 開発者向け情報
-
-### 開発環境のセットアップ
-
-1. Node.js と npm をインストール
-2. 必要なパッケージをインストール: `npm install`
-3. `manifest.json` の設定を確認
-
-### デバッグ方法
-
-1. Chrome の開発者ツール（F12）を使用
-2. バックグラウンドページのコンソールで詳細なログを確認
-3. エラーメッセージを参考に問題を特定
-
-## サポート
-
-問題や質問がある場合は、Issues セクションに投稿してください。
