@@ -9,7 +9,7 @@
   - ページタイトル
   - URL
   - 保存時刻
-  - カテゴリタグ（"auto"）
+  - カテゴリタグ（`auto`）
 - Notion API Key と Database ID の設定機能
 
 ## インストール方法
