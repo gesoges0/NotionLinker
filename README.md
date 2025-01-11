@@ -1,4 +1,4 @@
-# Notion Article Saver Chrome Extension
+# NotionLinker
 
 この Chrome 拡張機能は、現在閲覧中のウェブページを Notion のデータベースに簡単に保存することができます。
 
