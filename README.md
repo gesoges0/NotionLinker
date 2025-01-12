@@ -12,7 +12,7 @@ https://github.com/user-attachments/assets/a9409a02-6c36-4dde-8527-7b62cd592842
   - ページタイトル
   - URL
   - 保存時刻
-  - カテゴリタグ（`auto`）
+  - FROM (どの端末から投稿したか)
 - Notion API Key と Database ID の設定機能
 
 ## インストール方法
