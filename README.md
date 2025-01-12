@@ -39,8 +39,9 @@ https://github.com/user-attachments/assets/a9409a02-6c36-4dde-8527-7b62cd592842
 3. 保存先のデータベースを作成し、以下のプロパティを設定：
    - タイトル（title型）
    - URL（url型）
-   - 時刻（date型）
-   - カテゴリ（multi-select型）
+   - 作成日時（date型）
+   - 既読（checkbox型）
+   - FROM（select型）
 4. データベースの共有設定でインテグレーションを追加
 
 ## 使用方法
