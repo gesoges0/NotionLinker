@@ -1,13 +1,13 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.type === 'saveToNotion') {
-    saveToNotion(request.apiKey, request.databaseId, request.pageData)
+    saveToNotion(request.apiKey, request.databaseId, request.pageData, request.fromTag)
       .then(result => sendResponse({ success: true }))
       .catch(error => sendResponse({ success: false, error: error.message }));
     return true; // Will respond asynchronously
   }
 });
 
-async function saveToNotion(apiKey, databaseId, pageData) {
+async function saveToNotion(apiKey, databaseId, pageData, fromTag) {
   const response = await fetch(`https://api.notion.com/v1/pages`, {
     method: 'POST',
     headers: {
@@ -18,6 +18,9 @@ async function saveToNotion(apiKey, databaseId, pageData) {
     body: JSON.stringify({
       parent: { database_id: databaseId },
       properties: {
+        '既読': {
+          checkbox: false
+        },
         'タイトル': {
           title: [
             {
@@ -35,12 +38,11 @@ async function saveToNotion(apiKey, databaseId, pageData) {
             start: pageData.timestamp
           }
         },
-        'カテゴリ': {
-          multi_select: [
-            {
-              name: 'auto'
-            }
-          ]
+        'FROM': {
+          select: 
+          {
+            name: fromTag
+          }
         }
       }
     })
