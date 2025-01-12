@@ -2,6 +2,9 @@
 
 この Chrome 拡張機能は、現在閲覧中のウェブページを Notion のデータベースに簡単に保存することができます。
 
+https://github.com/user-attachments/assets/a9409a02-6c36-4dde-8527-7b62cd592842
+
+
 ## 機能
 
 - ワンクリックで現在のページ情報を Notion に保存
