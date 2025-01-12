@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('saveButton').addEventListener('click', async () => {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     
-    chrome.storage.sync.get(['notionKey', 'databaseId'], async (data) => {
+    chrome.storage.sync.get(['notionKey', 'databaseId', 'fromTag'], async (data) => {
       if (!data.notionKey || !data.databaseId) {
         alert('Please set Notion API Key and Database ID in settings');
         return;
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
           type: 'saveToNotion',
           apiKey: data.notionKey,
           databaseId: data.databaseId,
+          fromTag: data.fromTag,
           pageData: pageData
         });
 
